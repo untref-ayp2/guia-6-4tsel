@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 	"guia6/dictionary"
-	// "guia6/ejercicios"
+	"guia6/ejercicios"
 	// "guia6/linkedlist"
 	// "guia6/set"
 )
 
 func main() {
-	d := dictionary.NewDictionary[string, int]()
+	/* d := dictionary.NewDictionary[string, int]()
 	d.Put("Leo", 60)
 	d.Put("Leo", 61)
 	d.Put("Fabi", 36)
@@ -27,7 +27,15 @@ func main() {
 	fmt.Println("Clave: valor en el diccionario sin fede(String, Int)")
 	fmt.Println(d.String())
 	fmt.Println("--------------------")
-	fmt.Println(d.GetKeys())
+	fmt.Println(d.GetKeys()) */
+
+	notas := dictionary.NewDictionary[string, []int]()
+	notas.Put("Perez", []int{4,4,8,6})
+	notas.Put("Sánchez", []int{7,5,7,7})
+	notas.Put("Flores", []int{4,9,8})
+
+	fmt.Println(ejercicios.NotaFinal(notas))
+
 	/* ds := dictionary.NewDictionary[string, set.Set[int]]()
 	s := set.NewSet[int]()
 	s.Add(100)
